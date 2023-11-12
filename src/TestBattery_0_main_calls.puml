@@ -1,0 +1,207 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "TestBattery#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "TestBattery",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1333413357 { 
+   	label=Battery
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_458203412 { 
+   	label=Battery
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Battery1333413357XXXaddMiliampere97526364[
+	label="+ addMiliampere()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXcurrentMiliampere0[
+	label="+ currentMiliampere()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXdrain0[
+	label="+ drain()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXdrawBattery1808118735[
+	label="+ drawBattery()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXremainingCapacity0[
+	label="+ remainingCapacity()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXremoveMiliampere97526364[
+	label="+ removeMiliampere()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+
+Battery1333413357XXXviewBTRInfo0[
+	label="+ viewBTRInfo()"
+	style=filled
+	fillcolor=white
+	tooltip="Battery
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_944029947 { 
+   	label=TestBattery
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1412654968 { 
+   	label=TestBattery
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TestBattery944029947XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TestBattery
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Battery1333413357XXXviewBTRInfo0 -> Battery1333413357XXXremainingCapacity0;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXaddMiliampere97526364;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXcurrentMiliampere0;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXdrain0;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXdrawBattery1808118735;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXremainingCapacity0;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXremoveMiliampere97526364;
+TestBattery944029947XXXmain1859653459 -> Battery1333413357XXXviewBTRInfo0;
+    
+}
+@enduml
